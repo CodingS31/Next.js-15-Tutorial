@@ -1,21 +1,28 @@
 import { notFound } from "next/navigation";
 
+// function getRandomInt(count: number) {
+//   return Math.floor(Math.random() * count);
+// }
+
 export default async function ProductReview({
   params,
 }: {
-  params: { productId: string; reviewId: string };
+  params: Promise<{ productId: string; reviewId: string }>;
 }) {
-  const reviewId = parseInt(params.reviewId, 10);
+  // const random = getRandomInt(2);
+  // if (random === 1) {
+  //   throw new Error("Error loading review");
+  // }
 
-  if (reviewId > 1000) {
-    notFound(); // Triggers 404 page
+  const { productId, reviewId } = await params;
+
+  if (parseInt(reviewId) > 1000) {
+    // notFound(); // Triggers 404 page
+    notFound();
   }
   return (
-    <>
-      <h1>
-        Review {params.reviewId} for Product {params.productId}
-      </h1>
-      <h1>Review {reviewId}</h1>
-    </>
+    <h1>
+      Review {reviewId} for product {productId}
+    </h1>
   );
 }
