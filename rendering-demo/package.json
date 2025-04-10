@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "client-only": "^0.0.1",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-slick": "^0.30.3",
-    "server-only": "^0.0.1"
+    "server-only": "^0.0.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
