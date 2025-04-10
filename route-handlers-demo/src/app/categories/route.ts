@@ -1,4 +1,4 @@
-export const dynamic = "force-static";
+export const dynamic = "force-static"; // Cache the result
 
 export async function GET() {
   // This data would typically come from a database
