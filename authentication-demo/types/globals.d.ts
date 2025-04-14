@@ -1,11 +1,12 @@
-export type Role = "admin" | "moderator";
+export {};
+
+// Create a type for the roles
+export type Roles = "admin" | "moderator";
 
 declare global {
-  interface CustomJWTSessionClaims {
-    metadata?: {
-      role?: Role;
+  interface CustomJwtSessionClaims {
+    metadata: {
+      role?: Roles;
     };
   }
 }
-
-export {};

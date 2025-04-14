@@ -5,8 +5,8 @@ import { useAuth, useUser } from "@clerk/nextjs";
 
 export const Counter = () => {
   const [count, setCount] = useState(0);
-  const { isLoaded, userId, sessionId, getToken } = useAuth();
-  const { isSignedIn, user } = useUser();
+  const { isLoaded } = useAuth();
+  const { user } = useUser();
 
   if (!isLoaded || !user) return null;
 
